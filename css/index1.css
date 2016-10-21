@@ -361,39 +361,111 @@ select {
 
 .jq22 .copy2 {
 	position: absolute;
-	left: 10%;
+	left: 8%;
 	top: 1%;
 }
 
 .jq22 .copy3 {
 	position: absolute;
 	left: 2%;
-	top: 22%;
+	top: 17%;
 }
 
 .jq22 .copy4 {
 	position: absolute;
-	left: 10%;
-	top: 22%;
+	left: 8%;
+	top: 17%;
 }
 
 .jq22 .copy5 {
 	position: absolute;
 	left: 2%;
-	top: 43%;
+	top: 33%;
 }
 
 .jq22 .copy6 {
 	position: absolute;
-	left: 10%;
-	top: 43%;
+	left: 8%;
+	top: 33%;
 }
 
 .jq22 .copy7 {
 	position: absolute;
 	left: 2%;
-	top: 64%;
+	top: 49%;
 }
+.jq22 .copy8 {
+	position: absolute;
+	left: 8%;
+	top: 49%;
+}
+.jq22 .copy9 {
+	position: absolute;
+	left: 2%;
+	top: 65%;
+}
+.jq22 .copy10 {
+	position: absolute;
+	left: 8%;
+	top: 65%;
+}
+.jq22 .copy11 {
+	position: absolute;
+	left: 2%;
+	top: 81%;
+}
+
+.jq22 .copy12 {
+	position: absolute;
+	left: 8%;
+	top: 81%;
+}
+
+.jq22 .copy13 {
+	position: absolute;
+	left: 14%;
+	top: 1%;
+}
+
+.jq22 .copy14 {
+	position: absolute;
+	left: 14%;
+	top: 17%;
+}
+
+.jq22 .copy15 {
+	position: absolute;
+	left: 14%;
+	top: 33%;
+}
+
+.jq22 .copy16 {
+	position: absolute;
+	left: 14%;
+	top: 49%;
+}
+
+.jq22 .copy17 {
+	position: absolute;
+	left: 14%;
+	top: 65%;
+}
+.jq22 .copy18 {
+	position: absolute;
+	left: 14%;
+	top: 81%;
+}
+.jq22 .copy19 {
+	position: absolute;
+	left: 20%;
+	top: 1%;
+}
+.jq22 .copy20 {
+	position: absolute;
+	left: 20%;
+	top: 17%;
+}
+
 
 
 /*左侧菜单css*/
