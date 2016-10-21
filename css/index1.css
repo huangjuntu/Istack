@@ -73,29 +73,31 @@ select {
 }
 
 .desktop-two-center .news {
-	width: 100%;
-	height: 50%;
-	margin-top: 10px;
-	padding: 5px
+    height: 42%;
+    margin-top: 10px;
+    padding: -1px;
+    padding: -8px;
+    padding-top: 10%;
+    padding: 4% 5%;
 }
 
 .desktop-two-center .news p {
 	text-indent: 2em;
 	width: 100%;
-	line-height: 1.4;
+	line-height: 1.5em;
 }
 
 .shalou {
 	width: 85%;
 	height: 39%;
-	margin-top: 12px;
-	padding: 5px;
+	margin-top: 17px;
 	position: absolute;
 	top: 52%;
-	left: 6%;
+	left: 7%;
 	display: none;
-	background-image: url(../img/shalou.jpg);
-	background-size: 100% 100%;
+	border-radius: 7%;
+	overflow: hidden;
+	
 }
 
 .shalou span {
@@ -106,6 +108,9 @@ select {
 	line-height: 20px;
 	margin-top: 54%;
 	margin-left: 30%;
+    position: absolute;
+    right: 27%;
+    bottom: 10%;
 }
 
 .button-icon {
@@ -139,12 +144,12 @@ select {
 .code-img {
 	display: block;
 	position: absolute;
-	left: 60%;
 	height: 30%;
-	background: pink;
-	width: 400px;
-	height: 100px;
-	top: 69%;
+    right: 2%;
+    width: 33%;
+    height: 20%;
+    top: 72%;
+    overflow: hidden;
 }
 
 .show-pic {
@@ -560,6 +565,13 @@ select {
 }
 
 .pp img:hover {
+	opacity: 0.6;
+}
+.white_bd{
+	box-shadow: 0 0 4px white;
+	
+}
+.white_bd1{
 	opacity: 0.6;
 }
 
