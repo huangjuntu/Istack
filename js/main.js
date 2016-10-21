@@ -137,10 +137,7 @@ $(document).ready(function() {
 //	        //event.stopPropagation();//阻止事件向上冒泡
 //	    	}
 //	);
-	
-	
-	
-	//左下角菜单：鼠标点击其他区域消失
+//左下角菜单：鼠标点击其他区域消失
 document.getElementById('clitrigger').onclick = function (e) {
     document.getElementById('menu').style.display = 'block';
     e = e || window.event;
@@ -163,16 +160,22 @@ document.onclick = function (e) {
         var res = odiv.compareDocumentPosition(s);
         if (!(s == odiv || res == 20 || res == 0)) {
             odiv.style.display = 'none';
-            closeall();
+             closeall();
         }
     }
-}
-
-//	点击左下角的菜单
+}	
+	
+//	点击左下角的菜单(仔细看看有什么问题哦：当点击其他区域消失的时候，再点一次其他区域，然后再点菜单会响应)
 	var show1=1;
 	$(".clitrigger").click(function(){
 		if(show1==1){
 			$(".first").fadeIn();
+			show1=0;
+		}
+		else{
+			$(".first").fadeOut();
+	      	closeall();
+	      	show1=1;
 		}
 	});
 	

@@ -1,3 +1,4 @@
+
 // 右键切换模式（管理者，仪表盘）
 //$(function () {
 //  var imageMenuData = [
