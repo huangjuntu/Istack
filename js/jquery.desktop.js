@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
 });
 //下面的链接先注释掉
 var comNamess = [
-	["http://www.baidu0.com"], //0   这一个是左下角编程的地址，从下面开始对应图标
+	["http://www.baidu.com"], //0   这一个是左下角编程的地址，从下面开始对应图标
 	["http://www.baidu1.com"], //1
 	["http://www.baidu2.com"], //2
 	["http://www.baidu3.com"], //3
@@ -18,7 +18,19 @@ var comNamess = [
 	["http://www.baidu.com"],  //8
 	["http://www.jq22.com"],  //8
 	["http://www.baidu.com"], //10
-	["http://www.163.com"]
+	
+	["http://www.baidu1.com"], //21
+	["http://www.baidu2.com"], //22
+	["http://www.baidu3.com"], //23
+	["http://www.jq22.com"], //24
+	["http://www.4399.com"], //25
+	["http://www.jq22.com"], //26
+	["http://www.4399.com"], //27
+	["http://www.baidu.com"],  //28
+	["http://www.jq22.com"],  //28
+	["http://www.baidu.com"], //30
+	
+	["http://www.163.com"]//???这是谁的，暂定
 	
 
 ];
@@ -176,7 +188,7 @@ var JQD = (function($, window, undefined) {
 					var x = $(this).attr('href');
 					var y = $(x).find('a').attr('href');
 
-					for(var i = 0, j = 0; i <= 10; i++, j++) {
+					for(var i = 0, j = 0; i <= 20; i++, j++) {
 						$(".if" + i).attr("src", comNamess[j]);
 
 //						var z = $(this).attr('id');
@@ -218,7 +230,7 @@ var JQD = (function($, window, undefined) {
 					var x = $(this).attr('href');
 					var y = $(x).find('a').attr('href');
 
-					for(var i = 1, j = 0; i <= 8; i++, j++) {
+					for(var i = 0, j = 0; i <= 20; i++, j++) {
 						$(".if" + i).attr("src", comNamess[j]);
 						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
 					}
