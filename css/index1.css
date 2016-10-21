@@ -16,14 +16,14 @@ select {
 
 #desktop-two {
 	position: absolute;
-	z-index: 888;
-	padding: 5px;
-	top: 4%;
-	right: 8%;
-	width: 20%;
-	height: 60%;
-	background: #fff repeat;
-	border-radius: 20px;
+    z-index: 888;
+    padding: 5px;
+    top: 7%;
+    right: 2%;
+    width: 20%;
+    height: 60%;
+    background: #fff repeat;
+    border-radius: 20px;
 }
 
 .desktop-two-top {

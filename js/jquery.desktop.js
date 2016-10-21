@@ -7,14 +7,19 @@ jQuery(document).ready(function() {
 });
 //下面的链接先注释掉
 var comNamess = [
-	["http://www.baidu.com"], //1
-	["http://www.baidu.com"], //2
-	["http://www.baidu.com"], //3
+	["http://www.baidu0.com"], //0   这一个是左下角编程的地址，从下面开始对应图标
+	["http://www.baidu1.com"], //1
+	["http://www.baidu2.com"], //2
+	["http://www.baidu3.com"], //3
 	["http://www.jq22.com"], //4
-	["http://www.baidu.com"], //5
+	["http://www.4399.com"], //5
 	["http://www.jq22.com"], //6
-	["http://www.imxgr.com"], //7
+	["http://www.4399.com"], //7
+	["http://www.baidu.com"],  //8
+	["http://www.jq22.com"],  //8
+	["http://www.baidu.com"], //10
 	["http://www.163.com"]
+	
 
 ];
 // Namespace - Module Pattern.
@@ -171,10 +176,10 @@ var JQD = (function($, window, undefined) {
 					var x = $(this).attr('href');
 					var y = $(x).find('a').attr('href');
 
-					for(var i = 1, j = 0; i <= 8; i++, j++) {
+					for(var i = 0, j = 0; i <= 10; i++, j++) {
 						$(".if" + i).attr("src", comNamess[j]);
 
-						var z = $(this).attr('id');
+//						var z = $(this).attr('id');
 //						document.getElementById("test_lep").innerHTML = x + z;
 						//不可以					document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j]+j;
 
