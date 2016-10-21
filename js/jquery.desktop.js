@@ -114,15 +114,15 @@ var JQD = (function($, window, undefined) {
 			desktop: function() {
 
 				// Cancel mousedown, right-click.
-				//				$(document).mousedown(function(ev) {
-				//					if (!$(ev.target).closest('a').length) {
-				//						JQD.util.clear_active();
-				//						ev.preventDefault();//组织元素发生默认行为   注释掉了，否则input框被禁用
-				//						ev.stopPropagation();//检查指定方法是否调用了该方法
-				//					}
-				//				}).bind('contextmenu', function() {
-				//					return false;
-				//				});
+//								$(document).mousedown(function(ev) {
+//									if (!$(ev.target).closest('a').length) {
+//										JQD.util.clear_active();
+//										ev.preventDefault();//组织元素发生默认行为   注释掉了，否则input框被禁用
+//										ev.stopPropagation();//检查指定方法是否调用了该方法
+//									}
+//								}).bind('contextmenu', function() {
+//									return false;
+//								});
 
 				// Relative or remote links?
 				$('a').live('click', function(ev) {

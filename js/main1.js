@@ -1,29 +1,3 @@
-//左下角菜单：鼠标点击其他区域消失
-document.getElementById('clitrigger').onclick = function (e) {
-    document.getElementById('menu').style.display = 'block';
-    e = e || window.event;
-    if (e.stopPropagation) {
-        e.stopPropagation();
-    } else {
-        e.cancelBubble = true;
-    }
-}
-var odiv = document.getElementById('menu');
-document.onclick = function (e) {
-    e = e || window.event;
-    var s = e.target || e.srcElement;
-    if (e.srcElement) { //ie
-        if (!(s == odiv || odiv.contains(s))) {
-            odiv.style.display = 'none';
-        }
-    } else {
-        var res = odiv.compareDocumentPosition(s);
-        if (!(s == odiv || res == 20 || res == 0)) {
-            odiv.style.display = 'none';
-        }
-    }
-}
-
 // 右键切换模式（管理者，仪表盘）
 //$(function () {
 //  var imageMenuData = [
@@ -98,9 +72,11 @@ $(".shalou").mouseover(function () {
     $(".code-img").css("display", "none");
 });
 
-// 右侧按钮点击
+// 菜单栏按钮点击
+$('.jq22').css("display","none");
 $(".button-icon").toggle(
     function () {
+    	$('.jq22').css("display","block");
         $("#desktop .icon").css("display", "none");
         $("#button-icon").text("关闭整合模式");
         $("#button-icon").removeClass("button-icon");
@@ -108,6 +84,7 @@ $(".button-icon").toggle(
 
     },
     function () {
+    	$('.jq22').css("display","none");
         $("#desktop .icon").css("display", "block");
         $("#button-icon").text("开启整合模式");
         $("#button-icon").removeClass("button-icon1");

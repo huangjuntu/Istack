@@ -138,16 +138,41 @@ $(document).ready(function() {
 //	    	}
 //	);
 	
+	
+	
+	//左下角菜单：鼠标点击其他区域消失
+document.getElementById('clitrigger').onclick = function (e) {
+    document.getElementById('menu').style.display = 'block';
+    e = e || window.event;
+    if (e.stopPropagation) {
+        e.stopPropagation();
+    } else {
+        e.cancelBubble = true;
+    }
+}
+var odiv = document.getElementById('menu');
+document.onclick = function (e) {
+    e = e || window.event;
+    var s = e.target || e.srcElement;
+    if (e.srcElement) { //ie
+        if (!(s == odiv || odiv.contains(s))) {
+            odiv.style.display = 'none';
+            closeall();
+        }
+    } else {
+        var res = odiv.compareDocumentPosition(s);
+        if (!(s == odiv || res == 20 || res == 0)) {
+            odiv.style.display = 'none';
+            closeall();
+        }
+    }
+}
+
 //	点击左下角的菜单
 	var show1=1;
 	$(".clitrigger").click(function(){
 		if(show1==1){
 			$(".first").fadeIn();
-			show1=0;
-		}else{
-			$(".first").fadeOut();
-	      	closeall();
-	      	show1=1;
 		}
 	});
 	
