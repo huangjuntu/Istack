@@ -106,7 +106,7 @@ $(".shalou").live('mouseover', function() {
 	if(!timer2) {
 		timer2 = setTimeout(function() {
 			$(".code-img").css("display", "none");
-		}, 2000);
+		}, 5000);
 	}
 
 }).mouseleave(function() {
