@@ -90,7 +90,7 @@ $(".desktop-two-button").click(function () {
 
 //黑色区域
 var timer2 = 0;
-var imgs = ['img/zhbc.gif', 'img/zhbc1.gif', 'img/zhbc2.gif']; //注意：换成三张名称一样的不行
+var imgs = ['img/etl.gif', 'img/etl1.gif', 'img/etl2.gif']; //注意：换成三张名称一样的不行
 var len = imgs.length;
 var current = 0;
 $(".shalou").live('mouseover', function() {
