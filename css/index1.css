@@ -37,7 +37,8 @@ select {
 	border-radius: 8px;
 	height: 66%;
 	margin-top: 3%;
-	box-shadow: 0 0 5px #999
+	box-shadow: 0 0 5px #999;
+	cursor: pointer;
 }
 
 .desktop-two-center {
@@ -70,6 +71,10 @@ select {
 
 .desktop-two-center-four .map-img {
 	background-image: url(../img/shenzhen.png);
+}
+
+.desktop-two-center-five .map-img {
+	background-image: url(../img/shanghai.png);
 }
 
 .desktop-two-center .news {
@@ -200,6 +205,7 @@ select {
 	border-color: initial;
 	border-image: initial;
 	background: rgb(58, 157, 193);
+	cursor: pointer;
 }
 
 .desktop-two-header {
