@@ -19,16 +19,17 @@ var comNamess = [
 	["http://www.jq22.com"],  //8
 	["http://www.baidu.com"], //10
 	
-	["http://www.baidu1.com"], //21
-	["http://www.baidu2.com"], //22
-	["http://www.baidu3.com"], //23
-	["http://www.jq22.com"], //24
-	["http://www.4399.com"], //25
-	["http://www.jq22.com"], //26
-	["http://www.4399.com"], //27
-	["http://www.baidu.com"],  //28
-	["http://www.jq22.com"],  //28
-	["http://www.baidu.com"], //30
+	["http://www.baidu1.com"], //11
+	["http://www.baidu2.com"], //12
+	["http://www.baidu3.com"], //13
+	["http://www.jq22.com"], //14
+	["http://www.4399.com"], //15
+	["http://www.jq22.com"], //16
+	["http://www.4399.com"], //17
+	["http://www.baidu.com"],  //18
+	["http://www.jq22.com"],  //18
+	["http://www.baidu.com"], //20
+	["http://www.baidu.com"],  //21
 	
 	["http://www.163.com"]//???这是谁的，暂定
 	
@@ -224,13 +225,42 @@ var JQD = (function($, window, undefined) {
 					});
 				});
 
-				//				开始（左下角的智慧编程图标点击）
+				//开始（左下角的智慧编程图标点击）
 				$('li.icon1').live('click', function() {
 					// Get the link's target.
 					var x = $(this).attr('href');
 					var y = $(x).find('a').attr('href');
 
 					for(var i = 0, j = 0; i <= 20; i++, j++) {
+						$(".if" + i).attr("src", comNamess[j]);
+						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
+					}
+
+					// Show the taskbar button.
+					if($(x).is(':hidden')) {
+						$(x).remove().appendTo('#dock');
+						$(x).show('fast');
+					}
+
+					// Bring window to front.
+					JQD.util.window_flat();
+					$(y).addClass('window_stack').show();
+				}).live('mouseenter', function() {
+					$(this).die('mouseenter').draggable({
+						revert: true,
+						containment: 'parent'
+					});
+				});
+				
+				//开始  右侧图片1
+				$('.desktop-two-center .map1').live('click', function() {
+					// Get the link's target.
+					var x = $(this).attr('href');
+					
+					var y = $(x).find('a').attr('href');
+					console.log(y);
+
+					for(var i = 0, j = 0; i <= 21; i++, j++) {
 						$(".if" + i).attr("src", comNamess[j]);
 						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
 					}
