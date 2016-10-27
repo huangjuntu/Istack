@@ -78,15 +78,17 @@ div.ui-resizable-handle {
 	text-align: center;
 	text-shadow: #000 0 1px 2px;
 	width: 80px;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 
 .icon.active {
-	background: url(../img/gui/trans_black.png);
-	/*opacity: 0.6;*/
+	/*background: url(../img/gui/trans_black.png);*/
+	/*background: rgb(255,255,255,0.4);*/
 }
 
 .icon img {
-	background: url(../img/gui/trans_black.png) no-repeat -99999px -99999px;
+	/*background: url(../img/gui/trans_black.png) no-repeat -99999px -99999px;*/
 	display: block;
 	margin: 0 auto 5px;
     width: 60px;
