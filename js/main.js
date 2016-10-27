@@ -199,6 +199,7 @@ document.onclick = function (e) {
 	  
     $(".smartbox").find("li").click(function() {
         var myindex = $(this).index();
+        console.log("点击的索引是"+myindex);
         $(".second").find("div").eq(myindex).css({
             "display": "block"
         }).siblings().css({
@@ -209,7 +210,18 @@ document.onclick = function (e) {
             $(this).find(".tri").addClass("trion2");
             $(this).siblings().find(".tri").removeClass("trion");
 
-        } else {
+        }
+        else if(myindex == 5) {
+			$(this).addClass("active").siblings().removeClass("active").removeClass("active2");
+			$(this).find(".tri").addClass("trion");
+			$(this).siblings().find(".tri").removeClass("trion").removeClass("trion2");
+			$(".menucom").hide();
+			$(".menu4").hide();
+			$(".secondclose").css("display","none");
+			$(".other").css("display","block");
+			
+		} 
+        else {
             $(this).addClass("active").siblings().removeClass("active").removeClass("active2");
             $(this).find(".tri").addClass("trion");
             $(this).siblings().find(".tri").removeClass("trion").removeClass("trion2");
