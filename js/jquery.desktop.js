@@ -6,30 +6,35 @@ jQuery(document).ready(function() {
 
 });
 //下面的链接先注释掉
-var comNamess = [
-	["http://www.baidu.com"], //0   这一个是左下角编程的地址，从下面开始对应图标
-	["http://www.baidu1.com"], //1
-	["http://www.baidu2.com"], //2
-	["http://www.baidu3.com"], //3
-	["http://www.jq22.com"], //4
-	["http://www.4399.com"], //5
-	["http://www.jq22.com"], //6
-	["http://www.4399.com"], //7
-	["http://www.baidu.com"],  //8
-	["http://www.jq22.com"],  //8
-	["http://www.baidu.com"], //10
+var comNamess = [  
+	//对应index.html的orderr 序号
+	["http://www.baidu.com"], //0   这一个是左下角菜单:编程
+	["http://www.baidu1.com"], //1  仪电云
+	["http://www.baidu2.com"], //2 智能制造
+	["http://www.baidu3.com"], //3	智能路灯网
+	["http://www.jq22.com"], //4	智慧溯源
+	["http://www.4399.com"], //5	智慧交通
+	["http://www.jq22.com"], //6	智慧教育
+	["http://www.4399.com"], //7	智慧水务
+	["http://www.baidu.com"],  //8	智能建筑
+	["http://www.jq22.com"],  //9	商务不动产
+	["http://www.baidu.com"], //10	非银行金融
 	
-	["http://www.baidu1.com"], //11
-	["http://www.baidu2.com"], //12
-	["http://www.baidu3.com"], //13
-	["http://www.jq22.com"], //14
-	["http://www.4399.com"], //15
-	["http://www.jq22.com"], //16
-	["http://www.4399.com"], //17
-	["http://www.baidu.com"],  //18
-	["http://www.jq22.com"],  //18
-	["http://www.baidu.com"], //20
-	["http://www.baidu.com"],  //21
+	["http://www.baidu1.com"], //11	数据中心  
+	["http://www.baidu2.com"], //12	双创空间
+	["http://www.baidu3.com"], //13	园区水质管理
+	["http://www.jq22.com"], //14	智慧供水
+	["http://www.4399.com"], //15	乐行上海
+	["http://www.jq22.com"], //16	智慧轨交
+	["http://www.4399.com"], //17	岸基监视雷达
+	["http://www.baidu.com"],  //18	云应用商店
+	["http://www.jq22.com"],  //19	智慧广播网
+	["http://www.baidu.com"], //20  智能停车场
+	
+	["http://www.baidu.com"],  //21  桃浦区域地图
+	
+	["http://www.4399.com"],  //22  九州云
+	["http://www.jq22.com"],  //23  sxky
 	
 	["http://www.163.com"]//???这是谁的，暂定
 	
@@ -261,6 +266,64 @@ var JQD = (function($, window, undefined) {
 					console.log(y);
 
 					for(var i = 0, j = 0; i <= 21; i++, j++) {
+						$(".if" + i).attr("src", comNamess[j]);
+						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
+					}
+
+					// Show the taskbar button.
+					if($(x).is(':hidden')) {
+						$(x).remove().appendTo('#dock');
+						$(x).show('fast');
+					}
+
+					// Bring window to front.
+					JQD.util.window_flat();
+					$(y).addClass('window_stack').show();
+				}).live('mouseenter', function() {
+					$(this).die('mouseenter').draggable({
+						revert: true,
+						containment: 'parent'
+					});
+				});
+				
+				//开始  九州云
+				$('.jiuzhouyun').live('click', function() {
+					// Get the link's target.
+					var x = $(this).attr('href');
+					
+					var y = $(x).find('a').attr('href');
+					console.log(y);
+
+					for(var i = 0, j = 0; i <= 22; i++, j++) {
+						$(".if" + i).attr("src", comNamess[j]);
+						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
+					}
+
+					// Show the taskbar button.
+					if($(x).is(':hidden')) {
+						$(x).remove().appendTo('#dock');
+						$(x).show('fast');
+					}
+
+					// Bring window to front.
+					JQD.util.window_flat();
+					$(y).addClass('window_stack').show();
+				}).live('mouseenter', function() {
+					$(this).die('mouseenter').draggable({
+						revert: true,
+						containment: 'parent'
+					});
+				});
+//				sxky点击
+//开始  九州云
+				$('.sxky').live('click', function() {
+					// Get the link's target.
+					var x = $(this).attr('href');
+					
+					var y = $(x).find('a').attr('href');
+					console.log(y);
+
+					for(var i = 0, j = 0; i <= 23; i++, j++) {
 						$(".if" + i).attr("src", comNamess[j]);
 						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
 					}

@@ -404,8 +404,8 @@ th.shrink {
 }
 
 #bar_bottom {
-	/*background: #333 url(../img/gui/bar_bottom.png) repeat-x;*/
-	background: #153869;
+	background: #333 url(../img/gui/bar_bottom.png) repeat-x;
+	/*background: #153869;*/
 	border-top: 1px solid #fff;
 	color: #fff;
 	font-size: 13px;
@@ -415,7 +415,7 @@ th.shrink {
 	padding-top: 5px;
 	padding-bottom: 5px;
 	text-shadow: #000 0 1px 1px;
-	height: 32px;
+	height: 4%;
 	bottom: 0;
 }
 

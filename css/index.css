@@ -65,7 +65,7 @@ body {
 
 .istack{
     top: 93%;
-    right: -3%;
+    right: 8%;
     position: absolute;
     font-size: 1.2em;
     
@@ -73,6 +73,8 @@ body {
 .istack a{
 	color: white;
 	cursor: pointer;
+	-moz-user-select: none;
+	-webkit-user-select: none;
 }
 .smartcollege {
     width: 100px;
@@ -134,12 +136,20 @@ li {
 }
 
 .data {
-    height: 400px;
-    width: 840px;
-	background: url("../img/datamine.jpg") no-repeat ;
-    background-size: 100% 100%;
+    /*height: 400px;*/
+    /*width:640px;*/
+	/*background: url("../img/datamine.png") no-repeat ;*/
+    /*background-size: 100% 100%;*/
 	padding-top:0px;
 }
+ .db_click1{
+ 	   width: 526px;
+    height: 300px;
+}
+.db_click2{
+    cursor: default;
+     width: 700px; 
+     height: 300px;} 
 
 .data li {
     margin: 5px auto;
@@ -568,7 +578,7 @@ span.xiaomi  {
    
 }
 span.simit  {
-    background: url("../img/company/simit.png") no-repeat 30px;
+    background: url("../img/company/jzy.png") no-repeat 30px;
    
 }
 span.zhaoxin  {
