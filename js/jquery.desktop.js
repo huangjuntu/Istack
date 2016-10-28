@@ -12,7 +12,7 @@ var comNamess = [
 	["http://www.baidu1.com"], //1  仪电云
 	["http://www.baidu2.com"], //2 智能制造
 	["http://www.baidu3.com"], //3	智能路灯网
-	["http://www.jq22.com"], //4	智慧溯源
+	["http://www.jq22.com"], //4	智慧溯源  
 	["http://www.4399.com"], //5	智慧交通
 	["http://www.jq22.com"], //6	智慧教育
 	["http://www.4399.com"], //7	智慧水务
@@ -36,7 +36,9 @@ var comNamess = [
 	["http://www.4399.com"],  //22  九州云
 	["http://www.jq22.com"],  //23  sxky
 	
-	["http://www.163.com"]//???这是谁的，暂定
+	["http://www.163.com"],//24 桃浦科技智慧城管理系统点击
+	
+	["http://www.163.com"]
 	
 
 ];
@@ -315,7 +317,6 @@ var JQD = (function($, window, undefined) {
 					});
 				});
 //				sxky点击
-//开始  九州云
 				$('.sxky').live('click', function() {
 					// Get the link's target.
 					var x = $(this).attr('href');
@@ -324,6 +325,35 @@ var JQD = (function($, window, undefined) {
 					console.log(y);
 
 					for(var i = 0, j = 0; i <= 23; i++, j++) {
+						$(".if" + i).attr("src", comNamess[j]);
+						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
+					}
+
+					// Show the taskbar button.
+					if($(x).is(':hidden')) {
+						$(x).remove().appendTo('#dock');
+						$(x).show('fast');
+					}
+
+					// Bring window to front.
+					JQD.util.window_flat();
+					$(y).addClass('window_stack').show();
+				}).live('mouseenter', function() {
+					$(this).die('mouseenter').draggable({
+						revert: true,
+						containment: 'parent'
+					});
+				});
+				//				sxky点击
+//开始  桃浦科技
+				$('.tpkj').live('click', function() {
+					// Get the link's target.
+					var x = $(this).attr('href');
+					
+					var y = $(x).find('a').attr('href');
+					console.log(y);
+
+					for(var i = 0, j = 0; i <= 24; i++, j++) {
 						$(".if" + i).attr("src", comNamess[j]);
 						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
 					}
