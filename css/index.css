@@ -18,14 +18,14 @@ body,html,#main,.wrap {
 			background:rgba(255,255,255,0.6);
 		}
 /*新加进来的结束*/
-.smartfunction, .company, .data, .systemmanagement, .other {
+.smartfunction, .company, .data, .systemmanagement, .smartfunction-2 {
     display: none;
 }
-.other{
-	width: 300px;
+.smartfunction-2{
+	width: 150px;
     height: 200px;
 }
-.other li{
+.smartfunction-2 li{
 	width: 150px;
     text-align: center;
     height: 35px;
@@ -126,7 +126,7 @@ li {
     width: 230px;
 }
 
-.smartbox,.roundbox,.inesainside,.company,.data,.systemmanagement,.other {
+.smartbox,.roundbox,.inesainside,.company,.data,.systemmanagement,.smartfunction-2{
     border-radius: 5px;
     -moz-border-radius: 5px;
     background-color: rgba(250,250,250,0.6);
@@ -282,6 +282,20 @@ li {
     line-height: 35px;
     /*font-size: 16px;*/
 }
+.inesainside-2 {
+    height: 300px;
+    width: 150px;
+    cursor: pointer;
+    /*margin-bottom:0px;*/
+}
+
+.inesainside-2 li {
+    width: 150px;
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    /*font-size: 16px;*/
+}
 /* menu3 开始*/
 .child li{
     width: 300px;
@@ -291,10 +305,23 @@ li {
 	padding-bottom: 5px;
     margin-left: 30px;
 }
+.child-2 li{
+    width: 300px;
+    text-align: left;
+    height: 30px;
+    line-height: 30px;
+	padding-bottom: 5px;
+    margin-left: 30px;
+}
 .commenu {
-   // float: left;
+   /*// float: left;*/
     margin-left: 392px;
-	//display:none;
+	/*//display:none;*/
+}
+.commenu-2 {
+   /*// float: left;*/
+    margin-left: 392px;
+	/*//display:none;*/
 }
 .child {
     border-radius: 5px;
@@ -303,6 +330,15 @@ li {
     padding-top: 20px;
 	 height: auto;
     width: 350px;
+    cursor: pointer;
+}
+.child-2 {
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    background-color: rgba(250,250,250,0.6);
+    padding-top: 20px;
+	 height: auto;
+    width: 100px;
     cursor: pointer;
 }
 /* menu4 开始*/

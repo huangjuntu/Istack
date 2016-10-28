@@ -88,9 +88,10 @@ $(document).ready(function() {
 	startclock();
 	function closeall(){
 		  $(".first").fadeOut();
-		$(".secondclose ").hide();
+		$(".secondclose").hide();
 		$(".test").hide();
 		$(".menucom").hide();
+		$(".menucom-2").hide();
 		$(".menu4").hide();
 		$(".smartbox").find("li").each(function(){
 			$(this).removeClass("active")//小红图
@@ -105,6 +106,8 @@ $(document).ready(function() {
 		//menu fuyuan
 		$(".inesainside li").removeClass("active1");
 		$(".inesainside li").find("span").empty();
+		$(".inesainside-2 li").removeClass("active1");
+		$(".inesainside-2 li").find("span").empty();
 		
 		
 		 $("iframe").css({"z-index":"7"});
@@ -196,6 +199,12 @@ document.onclick = function (e) {
 			$(this).find('span').remove();
         $(this).append($span).siblings().find("span").empty();
    })
+	
+	$(".inesainside-2 li").click(function() {
+        $(this).addClass("active1").siblings().removeClass("active1");
+			$(this).find('span').remove();
+        $(this).append($span).siblings().find("span").empty();
+   })
 	  
     $(".smartbox").find("li").click(function() {
         var myindex = $(this).index();
@@ -218,7 +227,7 @@ document.onclick = function (e) {
 			$(".menucom").hide();
 			$(".menu4").hide();
 			$(".secondclose").css("display","none");
-			$(".other").css("display","block");
+			$(".smartfunction-2").css("display","block");
 			
 		} 
         else {
@@ -226,6 +235,7 @@ document.onclick = function (e) {
             $(this).find(".tri").addClass("trion");
             $(this).siblings().find(".tri").removeClass("trion").removeClass("trion2");
 				$(".menucom").hide();
+				$(".menucom-2").hide();
 				$(".menu4").hide();
 
         }
@@ -265,6 +275,19 @@ document.onclick = function (e) {
 		 $(this).addClass("active1");
 		 $(".child li").css('color','black');
         $(".commenu").find("div").eq(myindex).css({
+            "display": "block"
+        }).siblings().css({
+            "display": "none"
+        });
+	 });
+	 
+//	 九州云等
+		$(".inesainside-2").find("li").click(function() {
+        var myindex = $(this).index();
+//		$(".menu4").hide();
+		 $(this).addClass("active1");
+		 $(".child-2 li").css('color','black');
+        $(".commenu-2").find("div").eq(myindex).css({
             "display": "block"
         }).siblings().css({
             "display": "none"
