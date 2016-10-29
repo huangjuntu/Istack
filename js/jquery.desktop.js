@@ -8,37 +8,38 @@ jQuery(document).ready(function() {
 //下面的链接先注释掉
 var comNamess = [  
 	//对应index.html的orderr 序号
-	["http://www.baidu.com"], //0   这一个是左下角菜单:编程
+	["#"], //0   这一个是左下角菜单:编程
 	["http://www.baidu1.com"], //1  仪电云
-	["http://www.baidu2.com"], //2 智能制造
-	["http://www.baidu3.com"], //3	智能路灯网
-	["http://www.jq22.com"], //4	智慧溯源  
+	["http://10.200.43.37/test/1014/zhzz_main.html"], //2 智能制造
+	["http://10.200.43.37/test/1014/zhld_main.html"], //3	智能路灯网
+	["http://10.200.43.37/foodreal/index.htm"], //4	智慧溯源  
 	["http://www.4399.com"], //5	智慧交通
-	["http://www.jq22.com"], //6	智慧教育
-	["http://www.4399.com"], //7	智慧水务
-	["http://www.baidu.com"],  //8	智能建筑
-	["http://www.jq22.com"],  //9	商务不动产
-	["http://www.baidu.com"], //10	非银行金融
+	["http://10.200.43.37/test/1014/ydxs_main.html"], //6	智慧教育
+	["#"], //7	智慧水务
+	["#"],  //8	智能建筑
+	["http://10.200.43.37/test/1014/hxgf_main.html"],  //9	商务不动产
+	["http://10.200.43.37/test/1014/hxzq_main.html"], //10	非银行金融
 	
-	["http://www.baidu1.com"], //11	数据中心  
-	["http://www.baidu2.com"], //12	双创空间
-	["http://www.baidu3.com"], //13	园区水质管理
-	["http://www.jq22.com"], //14	智慧供水
-	["http://www.4399.com"], //15	乐行上海
-	["http://www.jq22.com"], //16	智慧轨交
-	["http://www.4399.com"], //17	岸基监视雷达
-	["http://www.baidu.com"],  //18	云应用商店
-	["http://www.jq22.com"],  //19	智慧广播网
-	["http://www.baidu.com"], //20  智能停车场
+	["http://10.200.43.37/test/1014/shkjw_main.html"], //11	数据中心  
+	["http://10.200.43.37/test/1014/sckj_main.html"], //12	双创空间
+	["http://10.200.43.37/test/1014/zhsw2_main.html"], //13	园区水质管理
+	["http://10.200.43.37/test/1014/zhsw_main.html"], //14	智慧供水
+	["http://10.200.43.37/test/1014/lxsh_main.html"], //15	乐行上海
+	["http://10.200.43.37/test/1014/gdjt_main.html"], //16	智慧轨交
+	["http://10.200.43.37/test/1014/ZHJT-index.html"], //17	岸基监视雷达
+	["http://10.200.43.37/test/1014/yyy_main.html"],  //18	云应用商店
+	["http://10.200.43.37/test/1014/gbw_main.html"],  //19	智慧广播网
+	["http://10.200.43.37/test/1014/tcc_main.html"], //20  智能停车场
 	
-	["http://www.baidu.com"],  //21  桃浦区域地图
+	["http://www.q-map.com.cn:8280/TaoPuSmartCity"],  //21  桃浦区域地图
 	
-	["http://www.4399.com"],  //22  九州云
-	["http://www.jq22.com"],  //23  sxky
+	["http://10.200.43.37/test/1014/jzy_main.html"],  //22  九州云
+	["#"],  //23  sxky
 	
-	["http://www.163.com"],//24 桃浦科技智慧城管理系统点击
+	["http://10.200.43.37/six"],//24 桃浦科技智慧城管理系统点击
+	["http://10.200.43.42:8181/monitor/site/login.jsp"],//25 重庆两江地图点击
 	
-	["http://www.163.com"]
+//	["http://www.163.com"]???
 	
 
 ];
@@ -344,7 +345,6 @@ var JQD = (function($, window, undefined) {
 						containment: 'parent'
 					});
 				});
-				//				sxky点击
 //开始  桃浦科技
 				$('.tpkj').live('click', function() {
 					// Get the link's target.
@@ -373,6 +373,36 @@ var JQD = (function($, window, undefined) {
 						containment: 'parent'
 					});
 				});
+				
+				//开始  右侧图片-重庆两江1
+				$('.cqlj').live('click', function() {
+					// Get the link's target.
+					var x = $(this).attr('href');
+					
+					var y = $(x).find('a').attr('href');
+					console.log(y);
+
+					for(var i = 0, j = 0; i <= 25; i++, j++) {
+						$(".if" + i).attr("src", comNamess[j]);
+						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
+					}
+
+					// Show the taskbar button.
+					if($(x).is(':hidden')) {
+						$(x).remove().appendTo('#dock');
+						$(x).show('fast');
+					}
+
+					// Bring window to front.
+					JQD.util.window_flat();
+					$(y).addClass('window_stack').show();
+				}).live('mouseenter', function() {
+					$(this).die('mouseenter').draggable({
+						revert: true,
+						containment: 'parent'
+					});
+				});
+				
 				//				结束
 
 				//				新加进来的开始
