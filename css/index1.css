@@ -24,6 +24,7 @@ select {
 	height: 66%;
 	background: #fff repeat;
 	border-radius: 20px;
+	z-index:4;
 }
 
 .desktop-two-top {

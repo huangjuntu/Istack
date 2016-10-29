@@ -164,7 +164,7 @@ div.ui-resizable-handle {
 	height: 80%;
 	top: 8%;
 	left: 25%;
-	z-index: 2;
+	z-index:999;
 }
 
 .window.window_stack,
