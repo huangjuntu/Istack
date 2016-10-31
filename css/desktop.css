@@ -197,7 +197,7 @@ div.ui-resizable-handle {
 	-webkit-border-radius: 0;
 	-webkit-background-clip: padding-box;
 	width: 100%;
-	height: 100%;
+	height: 99%;
 }
 
 .window_full .ui-resizable-se {
@@ -553,7 +553,7 @@ th.shrink {
 
 #desktop{
 	overflow: hidden;
-	top: 26px;
+	top: 0px;
 	left: 0;
 	right: 0;
 	bottom: 41px;

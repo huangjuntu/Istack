@@ -260,7 +260,7 @@ var JQD = (function($, window, undefined) {
 					});
 				});
 				
-				//开始  右侧图片1
+				//开始  右侧地图-桃浦地图
 				$('.map1').live('click', function() {
 					// Get the link's target.
 					var x = $(this).attr('href');
@@ -288,6 +288,16 @@ var JQD = (function($, window, undefined) {
 						containment: 'parent'
 					});
 				});
+				
+				//点击关闭时清空当前网址
+//					$(".tp_close").click(function(){
+//						var yy=$("#IframeID21").attr('src','');
+//						
+//				})
+				$(".window_close").click(function(){
+					var xx=$(this).parent().parent().next().attr('src','');//获取当前对象的网址，使其置为空
+						
+				})
 				
 				//开始  九州云
 				$('.jiuzhouyun').live('click', function() {
@@ -367,6 +377,7 @@ var JQD = (function($, window, undefined) {
 						containment: 'parent'
 					});
 				});
+
 				
 				//开始  右侧图片-重庆两江1
 				$('.cqlj').live('click', function() {

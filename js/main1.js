@@ -162,3 +162,5 @@ $(".db_click2").dblclick(function(){
 	$(this).hide();
 	$(".db_click1").show();
 })
+
+
