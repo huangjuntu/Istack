@@ -8,7 +8,8 @@ jQuery(document).ready(function() {
 //下面的链接先注释掉
 var comNamess = [  
 	//对应index.html的orderr 序号
-	["http://wwww.baidu.com"], //0   这一个是左下角菜单:编程
+	
+	["http://122.144.216.14/dataA"], //0   这一个是左下角菜单:编程
 	["http://www.baidu1.com"], //1  仪电云
 	["http://10.200.43.37/test/1014/zhzz_main.html"], //2 智能制造
 	["http://10.200.43.37/test/1014/zhld_main.html"], //3	智能路灯网
@@ -37,9 +38,8 @@ var comNamess = [
 	["#"],  //23  sxky
 	
 	["http://10.200.43.37/six"],//24 桃浦科技智慧城管理系统点击
-	["http://10.200.43.42:8181/monitor/site/login.jsp"],//25 重庆两江地图点击
+	["http://10.200.43.42:8181/monitor/site/login.jsp"]//25 重庆两江地图点击
 	
-	["http://www.163.com"] //???
 	
 
 ];
@@ -196,26 +196,19 @@ var JQD = (function($, window, undefined) {
 					//					$($(this).attr("id","window_close");
 					var x = $(this).attr('href');
 					var y = $(x).find('a').attr('href');
+					
+					var xx=$(this).attr("id");
+					var tt=xx.substring(4);
 
-					for(var i = 0, j = 0; i <= 20; i++, j++) {
-						$(".if" + i).attr("src", comNamess[j]);
+//原来的				for(var i = 0, j = 0; i <= 20; i++, j++) {$(".if" + i).attr("src", comNamess[j]);}
+					$(".if" + tt).attr("src", comNamess[tt]);
 
-//						var z = $(this).attr('id');
-//						document.getElementById("test_lep").innerHTML = x + z;
-						//不可以					document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j]+j;
-
-					}
-
-					//新增开始
+					//20个icon图标点击变换底色
 //
 					$(".img_icon").each(function() {
 						$(this).attr("src", $(this).attr("src1"));
 					})
 					$(this).find("img").attr("src", $(this).find("img").attr("src2"));
-
-					//新增结束
-					
-					
 
 					// Show the taskbar button.
 					if($(x).is(':hidden')) {
@@ -239,10 +232,9 @@ var JQD = (function($, window, undefined) {
 					var x = $(this).attr('href');
 					var y = $(x).find('a').attr('href');
 
-					for(var i = 0, j = 0; i <= 20; i++, j++) {
-						$(".if" + i).attr("src", comNamess[j]);
-						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
-					}
+//					for(var i = 0, j = 0; i <= 20; i++, j++) {$(".if" + i).attr("src", comNamess[j]);}
+					var i = 0;
+					$(".if" + i).attr("src", comNamess[i]);
 
 					// Show the taskbar button.
 					if($(x).is(':hidden')) {
@@ -268,10 +260,9 @@ var JQD = (function($, window, undefined) {
 					var y = $(x).find('a').attr('href');
 					console.log(y);
 
-					for(var i = 0, j = 0; i <= 21; i++, j++) {
-						$(".if" + i).attr("src", comNamess[j]);
-						//document.getElementById("test_lep").innerHTML="此刻地址为："+comNamess[j];
-					}
+//					for(var i = 0, j = 0; i <= 21; i++, j++) {$(".if" + i).attr("src", comNamess[j]);}
+					var i = 21;
+					$(".if" + i).attr("src", comNamess[i]);
 
 					// Show the taskbar button.
 					if($(x).is(':hidden')) {
