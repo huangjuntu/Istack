@@ -348,8 +348,8 @@ var JQD = (function($, window, undefined) {
 					var x = $(this).attr('href');
 					
 					var y = $(x).find('a').attr('href');
-					console.log(y);
-
+					
+					
 					var i = 24;
 						$(".if" + i).attr("src", comNamess[24]);
 
@@ -362,7 +362,8 @@ var JQD = (function($, window, undefined) {
 					// Bring window to front.
 					JQD.util.window_flat();
 					$(y).addClass('window_stack').show();
-				}).live('mouseenter', function() {
+				})
+				.live('mouseenter', function() {
 					$(this).die('mouseenter').draggable({
 						revert: true,
 						containment: 'parent'
